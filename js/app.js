@@ -30,9 +30,16 @@ class AlienShip {
 
 const game = {
 	start: function(){
-	console.log("Let's fight!");
+		const greeting = prompt("Somewhere in Cattus Galaxy, you are cruisng along in your brand new spaceship, curled up by the fireplace with a cup of tea when >>><<!!!BAM!!!>><<< You are being attacked by an evil alien Cockroach spaceship!!! What do you do?! Type DEFEND MY SHIP to fight or TAIL BETWEEN LEGS to retreat and go back to safety")
+		if (greeting === "DEFEND MY SHIP") {
+			console.log("You got it! Let's kill them bugs!");
+		}
+		if (greeting === "TAIL BETWEEN LEGS") {
+			console.log("Well, I guess you are going home....");
+		} else { console.log("Hit REFRESH and Type either TAIL BETWEEN LEGS or DEFEND MY SHIP")
 
-	},
+		}
+		},
 	createAllienship: function(){
 	for (let i = 0; i <=6; i++){
 		let alienShip = new AlienShip()
