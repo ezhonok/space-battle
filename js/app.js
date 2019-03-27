@@ -11,23 +11,32 @@ const USS_Assembly = {
 }
 // USS_Assembly.hull()
 
-const alien_Ship = {
-	hull: Math.floor(Math.random() * 3) + 4,
-	firepower: Math.floor(Math.random() * 3) + 2,
-	accuracy: (Math.random() * (.8 - .6) + .6).toFixed(1), //come back to this later
-	attack: function (){
-		return (USS_Assembly.hull - alien_Ship.firepower)
-
+class AlienShip {
+	constructor (){
+	this.hull = Math.floor(Math.random() * 3) + 4;
+	this.firepower =Math.floor(Math.random() * 3) + 2;
+	this.accuracy = (Math.random() * (.8 - .6) + .6).toFixed(1);
+	this.attack = function (){
+		// return (USS_Assembly.hull - AlienShip.firepower)
+		}
 	}
-
-	
 }
-console.log(alien_Ship.accuracy);
-alien_Ship.attack()
+const alienShip1 = new AlienShip()
+console.log(alienShip1);
+
+// console.log(alien_Ship.accuracy);
+// alien_Ship.attack()
 
 
 const game = () => {
 	
+
+//game shouls start the game
+//players will take turns
+//should have the prompts
+
+
+
 }
 
 
