@@ -7,7 +7,9 @@ const USS_Assembly = {
 	hull: 20,
 	firepower: 5,
 	accuracy: .7,
-
+	attack: function(){
+		console.log("attacked current alienship");
+	}
 }
 // USS_Assembly.hull()
 
@@ -33,8 +35,8 @@ const game = {
 		const greeting = prompt("Somewhere in Cattus Galaxy, you are cruisng along in your brand new spaceship, curled up by the fireplace with a cup of tea when >>><<!!!BAM!!!>><<< You are being attacked by an evil alien Cockroach spaceship!!! What do you do?! Type DEFEND MY SHIP to fight or TAIL BETWEEN LEGS to retreat and go back to safety")
 		if (greeting === "DEFEND MY SHIP") {
 			console.log("You got it! Let's kill them bugs!");
-		}
-		if (greeting === "TAIL BETWEEN LEGS") {
+		
+		if (greeting === "TAIL BETWEEN LEGS") 
 			console.log("Well, I guess you are going home....");
 		} else { console.log("Hit REFRESH and Type either TAIL BETWEEN LEGS or DEFEND MY SHIP")
 
@@ -45,9 +47,14 @@ const game = {
 		let alienShip = new AlienShip()
 	console.log(alienShip);
 	}
-	// return alienShip
+	
 	},
-
+	createPlayerShip: function(){
+		const confirm = prompt (`Your ship has ${USS_Assembly.hull} hp and ${USS_Assembly.firepower} attack points. Type OK to fight`);
+			if (confirm === "OK"){
+				this.createAllienship()
+			}
+		},
 	end: function(){
 
 	}
@@ -55,7 +62,7 @@ const game = {
 }
 game.start()
 // console.log(alienShip[i]);
-game.createAllienship()
+game.createPlayerShip()
 
 //game shouls start the game
 //players will take turns
