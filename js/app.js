@@ -9,14 +9,14 @@ const USS_Assembly = {
 	accuracy: .7,
 
 }
-USS_Assembly.hull()
+// USS_Assembly.hull()
 
 const alien_Ship = {
 	hull: Math.floor(Math.random() * 3) + 4,
 	firepower: Math.floor(Math.random() * 3) + 2,
-	accuracy: Math.floor(Math.random() * .6) + .8, //come back to this later
+	accuracy: (Math.random() * (.8 - .6) + .6).toFixed(1), //come back to this later
 	attack: function (){
-		return USS_Assembly.hull - alien_Ship.firepower;
+		return (USS_Assembly.hull - alien_Ship.firepower)
 
 	}
 
