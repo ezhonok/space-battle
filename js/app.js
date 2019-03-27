@@ -21,23 +21,40 @@ class AlienShip {
 		}
 	}
 }
-const alienShip1 = new AlienShip()
-console.log(alienShip1);
+// const alienShip1 = new AlienShip()
+// console.log(alienShip1);
 
 // console.log(alien_Ship.accuracy);
 // alien_Ship.attack()
 
 
-const game = () => {
-	
+const game = {
+	start: function(){
+	console.log("Let's fight!");
+
+	},
+	createAllienship: function(){
+	for (let i = 0; i <=6; i++){
+		let alienShip = new AlienShip()
+	console.log(alienShip);
+	}
+	// return alienShip
+	},
+
+	end: function(){
+
+	}
+
+}
+game.start()
+// console.log(alienShip[i]);
+game.createAllienship()
 
 //game shouls start the game
 //players will take turns
 //should have the prompts
 
 
-
-}
 
 
 
